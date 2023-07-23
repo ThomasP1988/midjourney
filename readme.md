@@ -17,13 +17,16 @@ I expect this library to be broken soon or later.
 
 You need to get an authorization token [How to get your Discord token?](https://www.androidauthority.com/get-discord-token-3149920/)
 
+Install the library 
+`go get github.com/ThomasP1988/midjourney` 
+
 Basically the library has two functions Imagine to set the prompt and upscale to chose the one you want.
 
 
 	botToken := ""
 	channelID := ""
 
-	client, err := NewClient(context.TODO(), botToken, channelID)
+	client, err := midjourney.NewClient(context.TODO(), botToken, channelID)
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
         return
@@ -36,7 +39,7 @@ Basically the library has two functions Imagine to set the prompt and upscale to
 		return
 	}
 
-	upscaledImage, err := client.Upscale(context.TODO(), &image.OriginalMessage, Upscale_U2)
+	upscaledImage, err := client.Upscale(context.TODO(), &image.OriginalMessage, midjourney.Upscale_U2)
 
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
@@ -55,7 +58,7 @@ If you need to achieve concurrency, you need to set multiple client with each a 
 
 Set your own discord server, this library is polling the messages but if there is a too high number of messages, your imagine/upscale answer can get lost.
 
-# Modifying client constants
+## Modifying client constants
 
 you can pass functions as +3rd argument on NewClient to modify the values of Client.
 
