@@ -2,7 +2,7 @@
 
 **YOU MIGHT GET YOUR MIDJOURNET ACCOUNT OR DISCORD ACCOUNT BANNED**
 
-This library **DO NOT** use discord public API or midjourney API.
+This library **DOES NOT** use discord public API or midjourney API.
 
 I initially wanted to develop a bot but discord is against bot to bot communication, this API is using the API dedicated to their front end, which makes this library very unstable.
 
