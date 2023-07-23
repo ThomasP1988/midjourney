@@ -19,7 +19,7 @@ You need to get an authorization token [How to get your Discord token?](https://
 
 Basically the library has two functions Imagine to set the prompt and upscale to chose the one you want.
 
-`
+
 	botToken := ""
 	channelID := ""
 
@@ -44,7 +44,7 @@ Basically the library has two functions Imagine to set the prompt and upscale to
 	}
 
 	fmt.Printf("upscaledImage: %+v\n", upscaledImage)
-`
+
 
 ## Concurrency
 
@@ -59,8 +59,8 @@ Set your own discord server, this library is polling the messages but if there i
 
 you can pass functions as +3rd argument on NewClient to modify the values of Client.
 
-`
-func(client *Client) error
 
-`
+	func(client *Client) error
+
+
 
